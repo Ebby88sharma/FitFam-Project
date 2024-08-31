@@ -7,7 +7,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 /* General styles */
 body {
     min-height: 100vh;
@@ -15,7 +14,6 @@ body {
     flex-direction: column;
     /* Generic project styles */
     color: #3a3a3a;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -23,29 +21,26 @@ body {
     height: 500px;
     background: url("../assets/images/pexels-marta-wave-6437840.jpg") no-repeat center center/cover;
     width: 50%;
-        /* Make the image take up half of the span */
+    /* Make the image take up half of the span */
     object-fit: cover;
-    position: relative;
     opacity: 70%;
-    display: inline-block;
-
-
+    margin-left: 10px;
 }
 #hero > h2 {
         width: 50%;
-        padding: 30px;
         font-size: 40px;
-        justify-content: center;
         text-align: left;
         color: green;
-
+        margin: 20% 0 2% 120%;
+        font-family: Arial, Helvetica, sans-serif;
 }
 
 #hero>p{
-    justify-content: center;
-    text-align: left;
     color: black;
-
+    margin: 0 0 0 125%;
+    width: 50%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -67,11 +62,65 @@ header a {
 
 #menu{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
     list-style-type: none;
     font-size: 110%;
-    letter-spacing: 2px;
+}
 
+#menu>li {
+    margin-bottom: 1rem;
+}
+
+/* About Us*/
+.about-us{
+    background-color: black;
+    height: 350px;
+    list-style-type: circle;
+}
+.heading{
+    font-size: 20px;
+    color:green;
+    margin-left: 100px;
+}
+.about-us > h2 {
+    margin-left: 50%;
+    padding-top: 20px;
+}
+
+.about-us>h3 {
+    margin-left: 30%;
+}
+
+.about-us-list{
+    color: #ffffff;
+    margin-top: 1.3rem;
+    margin-left: 3%;
+}
+
+.about-us-list>li{
+    margin-bottom: 0.5rem;
+}
+.schedule-table {
+    width: 30%;
+    text-align: left;
+    color:#ffffff;
+}
+.schedule-table th,
+.schedule-table td {
+    border: 1px #fff ;
+    border-bottom: inset; 
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #000;
+    font-weight: bold;
+}
+
+.schedule-table td {
+    background-color: #000;
 }
 
 /* Footer */
@@ -94,9 +143,28 @@ header a {
     text-align: center;
     line-height: 180%;
 }
+#signup-form{
+    color:black
+}
 
-#signup > h2{
+.about-us-label{
+    font-size: 17px;
+    margin-left: 15px;
+    color: #ffffff;
+
+}
+
+.about-us-table{
+    margin-left: 20%;
+    color:#ffffff;
+    padding-top: 30px;
+}
+
+
+#signup > h2,h4{
     color:green;
+    font-size: 25px;
+    padding: 5px;
 }
 #signup >button{
       background-color: green;
