@@ -100,7 +100,7 @@ header a {
 .about-us {
     margin-top: 3.2rem;
     background-color: black;
-    height: 350px;
+    height: 380px;
     list-style-type: circle;
 }
 
@@ -193,18 +193,19 @@ header a {
 
 #signup>h2,
 h4 {
-    color: #B21C0E;
+    color: #3d0d08;
     font-size: 25px;
     padding: 5px;
 }
 
-#signup>button {
-    background-color: #B21C0E;
+button {
+    background-color: #3d0d08;
     color: white;
     padding: 0.6rem;
-    border-radius: 50%;
     border-color: black;
     margin: 40px;
+    border-radius: 7%;
+    width: 150px;
 }
 
 /*Contact Us Section*/
@@ -218,11 +219,8 @@ h4 {
 
 #contact-us>h2,
 h4 {
-    color: #B21C0E;
+    color: #3d0d08;
 }
-
-/* Base Styles and Initial Setup (already defined earlier) */
-
 /* Media Queries for Different Screen Sizes */
 
 /* Small devices (mobile phones, 576px to 767px) */
