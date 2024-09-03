@@ -8,29 +8,41 @@
 }
 
 /* General styles */
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /* Generic project styles */
-    color: #3a3a3a;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-
-#hero {
-    height: 500px;
-    background: url("../assets/images/pexels-marta-wave-6437840.jpg") no-repeat center center/cover;
-    width: 50%;
-    /* Make the image take up half of the span */
-    opacity: 70%;
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top center;
+    z-index: -1;
+    opacity: 0.7;
 }
 
-#hero>h2 {
-    width: 50%;
-    font-size: 40px;
-    text-align: left;
-    color: green;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: #D0766E;
+    font-size: 200%;
+    position: absolute;
+    bottom: 30px;
+    width: 60%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
 }
 
 /*Navbar Menu Elements*/
@@ -42,7 +54,6 @@ body {
     padding: 0;
     margin: 0;
 }
-
 
 #menu li {
     margin: 0 15px;
@@ -57,14 +68,6 @@ body {
 
 #menu li a.active {
     text-decoration: underline;
-}
-
-#hero>p {
-    color: black;
-    margin: 0 0 0 125%;
-    width: 50%;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -95,6 +98,7 @@ header a {
 
 /* About Us*/
 .about-us {
+    margin-top: 3.2rem;
     background-color: black;
     height: 350px;
     list-style-type: circle;
@@ -102,8 +106,8 @@ header a {
 
 .heading {
     font-size: 20px;
-    color: green;
-    margin-left: 100px;
+    color: #B21C0E;
+    align-items: center;
 }
 
 .about-us>h2 {
@@ -112,7 +116,7 @@ header a {
 }
 
 .about-us>h3 {
-    margin-left: 30%;
+    margin-left: 33%;
 }
 
 .about-us-list {
@@ -129,6 +133,7 @@ header a {
     width: 30%;
     text-align: left;
     color: #ffffff;
+    margin-top: 1.3rem;
 }
 
 .schedule-table th,
@@ -188,13 +193,13 @@ header a {
 
 #signup>h2,
 h4 {
-    color: green;
+    color: #B21C0E;
     font-size: 25px;
     padding: 5px;
 }
 
 #signup>button {
-    background-color: green;
+    background-color: #B21C0E;
     color: white;
     padding: 0.6rem;
     border-radius: 50%;
@@ -213,40 +218,232 @@ h4 {
 
 #contact-us>h2,
 h4 {
-    color: green;
+    color: #B21C0E;
 }
 
-@media screen and (min-width: 576px) {
-    nav {
-        display: block;
-        position: relative;
-        box-shadow: none;
-        width: fit-content;
-        padding-right: 1rem;
+/* Base Styles and Initial Setup (already defined earlier) */
+
+/* Media Queries for Different Screen Sizes */
+
+/* Small devices (mobile phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    #hero {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+        #cover-text {
+            width: 300px;
+            right: 50px;
+        }
+
+    #hero-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     #menu {
-        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
     }
 
-    #menu>li {
-        padding-left: 1rem;
+    .schedule-table {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Extra Small devices (mobile phones, below 576px) */
+@media (max-width: 575px) {
+    #hero {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
     }
 
-    .nav-toggle-label {
-        display: none;
+    #hero-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
     }
 
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .schedule-table {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #hero {
+        width: 100%;
+        height: 400px;
+        margin-left: 0;
+    }
+
+    #hero-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .schedule-table {
+        width: 60%;
+        margin-left: 0;
+    }
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #hero {
+        width: 70%;
+        height: 450px;
+        margin-left: 10px;
+    }
+
+    #hero-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
+    }
+}
+
+/* Base Styles and Initial Setup (already defined earlier) */
+
+/* Media Queries for Different Screen Sizes */
+
+/* Small devices (mobile phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    #hero {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    #hero-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .schedule-table {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Extra Small devices (mobile phones, below 576px) */
+@media (max-width: 575px) {
+    #hero {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    #hero-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .schedule-table {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #hero {
+        width: 100%;
+        height: 400px;
+        margin-left: 0;
+    }
+
+    #hero-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .schedule-table {
+        width: 60%;
+        margin-left: 0;
+    }
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #hero {
+        width: 70%;
+        height: 450px;
+        margin-left: 10px;
+    }
+
+    #hero-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
+    }
 }
 
 /* Extra Large devices (1200px and up) */
 @media (min-width: 1200px) {
     #hero {
         width: 60%;
-        /* Maintain width */
         height: 500px;
-        /* Maintain height */
         margin-left: 10px;
+    }
+
+    #hero-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
     }
 
     #hero>h2 {
@@ -256,152 +453,5 @@ h4 {
 
     #hero>p {
         margin: 0 0 0 125%;
-    }
-}
-
-/* Large devices (desktops, 992px to 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-    #hero {
-        width: 70%;
-        /* Slightly wider */
-        height: 450px;
-        margin-left: 10px;
-    }
-
-    #hero>h2 {
-        font-size: 36px;
-        margin: 15% 0 2% 70%;
-        /* Adjust position */
-    }
-
-    #hero>p {
-        margin: 0 0 0 70%;
-        /* Adjust text position */
-    }
-}
-
-/* Medium devices (tablets, 768px to 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-    #hero {
-        width: 100%;
-        /* Full width for tablets */
-        height: 400px;
-        /* Slightly reduced height */
-        margin-left: 0;
-        /* Remove extra margin */
-    }
-
-    #hero>h2 {
-        font-size: 32px;
-        /* Slightly smaller text */
-        margin: 15% 0 2% 10%;
-        /* Adjust position */
-        width: 80%;
-        /* Adjust text width */
-    }
-
-    #hero>p {
-        margin: 0 0 0 10%;
-        /* Adjust margin */
-        width: 80%;
-        /* Adjust width */
-    }
-
-    .schedule-table {
-        width: 60%;
-        /* Adjust table width */
-        margin-left: 0;
-    }
-}
-
-/* Small devices (mobile phones, 576px to 767px) */
-@media (min-width: 576px) and (max-width: 767px) {
-    #hero {
-        width: 100%;
-        /* Full width for small devices */
-        height: auto;
-        /* Let height adjust automatically */
-        margin-left: 0;
-        /* Remove extra margin */
-    }
-
-    #hero>h2 {
-        font-size: 24px;
-        /* Smaller text size */
-        margin: 10% 0 2% 5%;
-        /* Adjust position */
-        width: 90%;
-        /* Adjust width */
-    }
-
-    #hero>p {
-        margin: 0 0 0 5%;
-        /* Adjust margin */
-        width: 90%;
-        /* Adjust width */
-    }
-
-    header {
-        flex-direction: column;
-        /* Stack elements vertically */
-        align-items: flex-start;
-    }
-
-    #menu {
-        flex-direction: column;
-        /* Stack menu items vertically */
-        margin-top: 10px;
-    }
-
-    .schedule-table {
-        width: 100%;
-        /* Full width table */
-        margin-left: 0;
-    }
-}
-
-/* Extra Small devices (mobile phones, below 576px) */
-@media (max-width: 575px) {
-    #hero {
-        width: 100%;
-        /* Full width */
-        height: auto;
-        /* Auto-adjust height */
-        margin-left: 0;
-        /* Remove margin */
-    }
-
-    #hero>h2 {
-        font-size: 20px;
-        /* Smaller font size */
-        margin: 10% 0 2% 5%;
-        /* Adjust position */
-        width: 90%;
-        /* Adjust width */
-    }
-
-    #hero>p {
-        margin: 0 0 0 5%;
-        /* Adjust margin */
-        width: 90%;
-        /* Adjust width */
-    }
-
-    header {
-        flex-direction: column;
-        /* Stack elements vertically */
-        align-items: center;
-    }
-
-    #menu {
-        flex-direction: column;
-        /* Stack menu items vertically */
-        margin-top: 10px;
-    }
-
-    .schedule-table {
-        width: 100%;
-        /* Full width table */
-        margin-left: 0;
     }
 }

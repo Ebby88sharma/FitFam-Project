@@ -11,9 +11,9 @@
     <title>Club Coding</title>
 
     <!--Favicon-->
-    <link rel="icon" sizes="180x180" href="assets/images/code.png">
-    <link rel="icon" sizes="32x32" href="assets/images/code.png">
-    <link rel="icon" sizes="16x16" href="assets/images/code.png">
+    <link rel="icon" sizes="180x180" href="assets/media/lotus.png">
+    <link rel="icon" sizes="32x32" href="assets/media/lotus.png">
+    <link rel="icon" sizes="16x16" href="assets/media/lotus.png">
     
     <!--StyleSheet-->
     <link rel="stylesheet" href="assets/styles.css">
@@ -23,7 +23,7 @@
     <!--Header Section-->
     <header>
         <a href="index.html">
-            <h1 id="logo">CODING CLUB</h1>
+            <h1 id="logo">FitFam</h1>
         </a>
             <ul id="menu">
                 <li><a href="#about-us" class="active">About Us</a></li>
@@ -32,24 +32,33 @@
             </ul>
     </header>
 
-        <div id="hero">
-            <h2>Coding Club</h2>
-            <p>Join our kids coding club <br>for ages 8 to 18!</p>
-        </div>
+        
 
    <!--About-US-->
    <main>
+    <div id="hero">
+        <section id="hero">
+            <div id="cover-text">
+                <h2>Health and Fitness</h2>
+                <h3>Home workouts & Easy Diet</h3>
+            </div>
+        </section>
+        <video autoplay muted loop id="hero-video">
+            <source src="../assets/media/4057407-uhd_4096_2160_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <section id="about-us" class="about-us">
       <h2 class="heading">About us</h2>
-      <h3 class="heading">Learn how to solve coding puzzles, build games, and program robots!</h3>
+      <h3 class="heading">We provide home as well as gym workout with diet plans</h3>
     <div class="about-us-section">
         <p class="about-us-label">We offer:</p>
         <ul class="about-us-list">
-            <li>Weekly club meetings for different age groups</li>
-            <li>Learn how to think logically from a young age</li>
+            <li>Weekend trekking activities</li>
+            <li>Learn how to adjust diet to stay on track</li>
             <li>Build games with your own code</li>
-            <li>Program robots to follow commands</li>
-            <li>Pick up a cool valuable skill while having fun!</li>
+            <li>Plan program robots to follow commands</li>
+            <li>Pick up a cool activity like tabata, zumba or HIIT from you home!</li>
         </ul>
     </div>
 
@@ -58,8 +67,9 @@
             <thead>
                 <tr>
                     <th>Day</th>
+                    <th>Venue</th>
                     <th>Time</th>
-                    <th>Ages</th>
+                    <th>Plan</th>
                 </tr>
             </thead>
             <tbody>
@@ -67,16 +77,19 @@
                     <td>Fri</td>
                     <td>16:00</td>
                     <td>8 - 12</td>
+                    <td>8 - 12</td>
                 </tr>
                 <tr>
                     <td>Sat</td>
                     <td>11:00</td>
                     <td>13 - 15</td>
+                    <td>8 - 12</td>
                 </tr>
                 <tr>
                     <td>Sun</td>
                     <td>15:00</td>
                     <td>16 - 18</td>
+                    <td>8 - 12</td>
                 </tr>
             </tbody>
         </table>
@@ -86,11 +99,11 @@
         <section id="signup">
             <form id="signup-form" method="POST" action="https://formdump.codeinstitute.net">
                 <h2>Sign up!</h2>
-                <h4>10 classes for £40</h4>
-                <label for="first-name">Child's Name</label><br>
+                <h4>Per month for $20 for 1 person</h4>
+                <label for="first-name">Full Name</label><br>
                 <input type="text" name="first_name" id="first-name" class="text-input" required>
                 <br>
-                <label for="last-name">Parent's/Guardian's Name</label><br>
+                <label for="last-name">Last Name</label><br>
                 <input type="text" name="last_name" id="last-name" class="text-input" required>
                 <br>
                 <label for="email-address">Contact Email</label><br>
