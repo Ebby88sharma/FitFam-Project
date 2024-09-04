@@ -52,7 +52,7 @@ The project is responsive according to the different screen sizes.
 - **Accessibility**: 94
 - **Best Practices**: 100
 - **SEO**: 100
-![alt text](image.png)
+![alt text](image-1.png)
 ---
 
 ## Unfixed Bugs
