@@ -69,7 +69,7 @@ Transparent black overlay for text in the hero section to ensure readability ove
 - **Accessibility**: 94
 - **Best Practices**: 100
 - **SEO**: 100
-![alt text](image-3.png)
+![alt text](image.png)
 ---
 
 ## Unfixed Bugs
