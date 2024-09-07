@@ -1,5 +1,5 @@
 # FitFam-Project
-=============================================================================================
+===========================
 ### Project Overview
 FitFam is a fitness website aimed at promoting home and gym-based workouts, nutrition plans, and weekend trekking activities. The project offers a subscription-based service to encourage users to maintain a healthy lifestyle.
 
