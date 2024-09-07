@@ -47,7 +47,7 @@ header a {
 }
 
 #logo {
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
 
 #menu {
@@ -80,7 +80,7 @@ header a {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    padding: 2.5rem 3rem;
+    padding: 1rem 1.5rem;
     background-color: rgba(51, 51, 51, 0.5);
     color: white;
     font-weight: bold;
@@ -237,29 +237,6 @@ footer li {
     .schedule-table th,
     .schedule-table td {
         padding: 0.5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #hero {
-        height: 250px;
-    }
-
-    #cover-text {
-        bottom: 10px;
-        left: 10px;
-        font-size: 1.2rem;
-        padding: 1rem 1.5rem;
-        /* Adjust padding for smaller screens */
-        max-width: 250px;
-    }
-
-    #cover-text h2 {
-        font-size: 1.5rem;
-    }
-
-    #cover-text h3 {
-        font-size: 1.1rem;
     }
 }
 
